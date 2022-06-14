@@ -1,0 +1,22 @@
+//font
+$mon:'Montserrat', sans-serif;
+$bit:'Bitter', serif;
+$fsz:14px;
+$lh:18px;
+$fw:400;
+$fst:normal;
+
+//colors
+$col1:#23262D;
+$col2:#606268;
+$orange:#E36F59;
+$white:#FFFFFF;
+
+@mixin fontz($mon,$fst,$fw,$fsz,$lh,$col1) {
+    font-family:$mon;
+    font-style: $fst;
+    font-weight: $fw;
+    font-size: $fsz;
+    line-height: $lh;
+    color: $col1;
+}
