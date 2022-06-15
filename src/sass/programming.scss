@@ -1,0 +1,65 @@
+@import "modifications.scss";
+
+
+
+.programming{
+    padding: 0 0 160px;
+    h2{
+        text-align: center;
+        position: relative;
+        top: 0;
+        left: 0;
+        &::before{
+            content: "";
+            width: 111px;
+            height: 16px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $orange;
+            border-radius: 4px;
+            opacity: 0.5;
+            z-index: -1;
+        }
+    }
+    .programming__cards{
+        margin-top: 65px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .programming__card{
+            >img{
+                object-fit: contain;
+            }
+            &:first-of-type{
+                max-width: 260px;
+                width: 100%;
+                >img{
+                    width: 100%;
+                }
+            }
+            &:nth-of-type(2){
+                max-width: 342px;
+                width: 100%;
+                >img{
+                    width: 100%;
+                }
+            }
+            &:last-of-type{
+                max-width: 276px;
+                width: 100%;
+                >img{
+                    width: 100%;
+                }
+            }
+            >p{
+                margin-top: 40px;
+                @include fontz($mon,$fst,600,20px,24px,$col1);
+                text-align: center;
+            }
+        }
+    }
+}
+
+

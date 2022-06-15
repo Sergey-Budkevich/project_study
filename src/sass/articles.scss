@@ -1,7 +1,7 @@
 @import "modifications.scss";
 
 .articles {
-    padding: 35px 0 130px;
+    padding: 35px 0 160px;
     .content{
         position: relative;
         top: 0;
@@ -17,13 +17,11 @@
             right: -450px;
             z-index: -1;
         }
-        .articles__header{
+        .articles__row{
             display: flex;
             align-items: center;
             justify-content: space-between;
             >h2{
-                @include fontz($bit,$fst,700,50px,50px,$col1);
-                letter-spacing: 0.01em;
                 position: relative;
                 top: 0;
                 left: 0;
@@ -125,16 +123,6 @@
                         }
                     }
                 }
-            }
-        }
-        .articles__slider{
-            width: 100%;    
-            margin-top: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            &:first-child {
-                margin-left: 30px;
             }
         }
     }

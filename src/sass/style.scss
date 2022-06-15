@@ -1,6 +1,8 @@
 @import "header.scss";
 @import "about.scss";
 @import "articles.scss";
+@import "courses.scss";
+@import "programming";
 
 
 * {
@@ -14,4 +16,20 @@
     max-width: calc(1230px + 16px * 2);
     margin: 0 auto;
     padding: 0 16px;
+}
+
+.title{
+    @include fontz($bit,$fst,700,50px,50px,$col1);
+    letter-spacing: 0.01em;
+}
+
+.slider{
+    width: 100%;    
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:first-child {
+        margin-left: 30px;
+    }
 }
