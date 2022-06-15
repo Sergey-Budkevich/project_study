@@ -1,0 +1,62 @@
+@import "modifications.scss";
+
+.articles {
+    padding: 35px 0 130px;
+    .content{
+        position: relative;
+        top: 0;
+        left: 0;
+        &::after{
+            content: "";
+            background-image: url("../assets/images/bob_orange.jpg");
+            background-repeat: no-repeat;
+            width: 857px;
+            height: 695px;
+            position: absolute;
+            top: -60px;
+            right: -450px;
+            z-index: -1;
+        }
+        .wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            >h2{
+                @include fontz($bit,$fst,700,50px,50px,$col1);
+                letter-spacing: 0.01em;
+                position: relative;
+                top: 0;
+                left: 0;
+                &::before{
+                    content: "";
+                    width: 111px;
+                    height: 16px;
+                    position: absolute;
+                    bottom: 0;
+                    left: -9px;
+                    background-color: $orange;
+                    border-radius: 4px;
+                    opacity: 0.5;
+                    z-index: -1;
+                }
+            }
+            >a{
+                width: 172px;
+                height: 50px;
+                @include fontz($bit,$fst,600,16px,19px,$orange);
+                border: 2px solid $orange;
+                border-radius: 8px;
+                text-align: center;
+                text-decoration: $td;
+                padding: 15px 0;
+                background-color: $white;
+            }
+        }
+    }
+}
+
+
+
+
+
+

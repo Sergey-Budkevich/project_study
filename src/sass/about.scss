@@ -1,7 +1,8 @@
 @import "modifications.scss";
 
 .about{
-    padding: 86px 0 160px;
+    padding: 86px 0 120px;
+    min-height: 100vh;
     .content{
         display:flex;
         align-items: stretch;
@@ -30,6 +31,7 @@
             margin-right: 20px;
             >h1{
                 @include fontz($bit,$fst,700,60px,72px,$col1);
+                letter-spacing: 0.005em;
                 >span{
                     color: $orange;
                 }
@@ -49,7 +51,7 @@
                 margin-top: 50px;
                 @include fontz($bit,$fst,600,16px,19px,$col2);
                 background-color: $orange;
-                text-decoration: none;
+                text-decoration: $td;
                 color: $white;
                 border-radius: 8px;
                 >svg {
