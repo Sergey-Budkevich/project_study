@@ -1,0 +1,34 @@
+@import "modifications.scss";
+
+.footer{
+    width: 100%;
+    height: 90px;
+    background-color: #2D3034;
+    .footer__content{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        >p{
+            @include fontz($mon,$fst,400,16px,16px,$white);
+        }
+        >nav{
+            display: flex;
+            justify-content: space-between;
+            a{
+                @include fontz($bit,$fst,700,16px,16px,$white);
+                letter-spacing: 0.03em;
+                text-transform: uppercase;
+                text-decoration: $td;
+                &:hover{
+                    color: $orange;
+                }
+            }
+            a:not(:last-child){
+                margin-right: 40px;
+            }
+        }
+    }
+}
+
+

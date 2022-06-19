@@ -1,9 +1,10 @@
 @import "modifications.scss";
 
 
-.subscription{
+.subscription {
     padding: 0 0 160px;
-    .subscription__content{
+
+    .subscription__content {
         padding: 60px calc(90px + 16px);
         box-shadow: 0px 14px 34px rgba(21, 33, 56, 0.11);
         border-radius: 20px;
@@ -11,7 +12,8 @@
         position: relative;
         top: 0;
         left: 0;
-        &::after{
+
+        &::after {
             content: "";
             width: 528px;
             height: 475px;
@@ -22,7 +24,8 @@
             right: -295px;
             z-index: -1;
         }
-        &::before{
+
+        &::before {
             content: "";
             width: 752px;
             height: 609px;
@@ -33,29 +36,33 @@
             left: -409px;
             z-index: -1;
         }
-        >h2{
-            >span:first-of-type{
+
+        > h2 {
+            > span:first-of-type {
                 position: relative;
                 top: 0;
                 left: 0;
-                &::before{
-                content: "";
-                width: 111px;
-                height: 16px;
-                position: absolute;
-                bottom: 0;
-                left: -9px;
-                background-color: $orange;
-                border-radius: 4px;
-                opacity: 0.5;
-                z-index: -1;
+
+                &::before {
+                    content: "";
+                    width: 111px;
+                    height: 16px;
+                    position: absolute;
+                    bottom: 0;
+                    left: -9px;
+                    background-color: $orange;
+                    border-radius: 4px;
+                    opacity: 0.5;
+                    z-index: -1;
+                }
             }
-            }
-            >span:last-of-type{
+
+            > span:last-of-type {
                 position: relative;
                 top: 0;
                 left: 0;
-                &::after{
+
+                &::after {
                     content: "";
                     width: 190px;
                     height: 16px;
@@ -69,16 +76,19 @@
                 }
             }
         }
-        >p{
-            @include fontz($mon,$fst,400,18px,26px,$col2);
+
+        > p {
+            @include fontz($mon, $fst, 400, 18px, 26px, $col2);
             margin-top: 10px;
         }
-        >form{
+
+        > form {
             margin-top: 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            >.subscription__form-item{
+
+            > .subscription__form-item {
                 max-width: 390px;
                 width: 100%;
                 height: 60px;
@@ -87,40 +97,47 @@
                 border-radius: 8px;
                 display: flex;
                 align-items: center;
-                >input{
+
+                > input {
                     height: 100%;
                     max-width: 330px;
                     width: 100%;
                     border: none;
                     outline-color: $orange;
                     z-index: 1;
-                    @include fontz($mon,$fst,400,16px,16px,$col2);
-                    &::placeholder{
-                        @include fontz($mon,$fst,400,16px,16px,$col2);
+                    @include fontz($mon, $fst, 400, 16px, 16px, $col2);
+
+                    &::placeholder {
+                        @include fontz($mon, $fst, 400, 16px, 16px, $col2);
                         transform: translateX(30px);
                     }
-                    &:hover{
-                        background-color: rgba(112,202,252,0.6) ;
+
+                    &:hover {
+                        background-color: rgba(112, 202, 252, 0.6);
                     }
-                    &:focus{
-                        background-color: rgba(146,227,169,0.6);
+
+                    &:focus {
+                        background-color: rgba(146, 227, 169, 0.6);
                     }
                 }
-                >.subscription__form-box{
+
+                > .subscription__form-box {
                     height: 40px;
                     width: 60px;
-                    border-left: inherit; 
+                    border-left: inherit;
                     padding: 12px 22px;
                 }
             }
-            >button{
+
+            > button {
                 width: 210px;
                 height: 60px;
                 border-radius: 8px;
                 background-color: $orange;
                 border: none;
-                @include fontz($bit,$fst,600,16px,19px,$white);
-                >svg{
+                @include fontz($bit, $fst, 600, 16px, 19px, $white);
+
+                > svg {
                     margin-left: 20px;
                 }
             }
