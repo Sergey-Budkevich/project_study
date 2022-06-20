@@ -2,13 +2,19 @@
 
 .articles {
     padding: 35px 0 160px;
+    @media (max-width:1024px){
+        padding: 50px 0;
+    }
+    @media (max-width:768px){
+        padding: 40px 0 ;
+    }
     .content{
         position: relative;
         top: 0;
         left: 0;
         &::after{
             content: "";
-            background-image: url("../assets/images/bob_orange.jpg");
+            background-image: url("../assets/images/bob_orange.svg");
             background-repeat: no-repeat;
             width: 857px;
             height: 695px;
@@ -36,6 +42,10 @@
                     border-radius: 4px;
                     opacity: 0.5;
                     z-index: -1;
+                    @media (max-width:768px){
+                            width: 50px;
+                            height: 8px;
+                        }
                 }
             }
             >a{
@@ -48,20 +58,67 @@
                 text-decoration: $td;
                 padding: 15px 0;
                 background-color: $white;
+                @media (max-width:1024px){
+                    widows: 152px;
+                    height: 42px;
+                    padding: 11px 0;
+                }
+                @media (max-width:768px){
+                    width: auto;
+                    height: auto;
+                    border: none;
+                    background-color: transparent;
+                    text-decoration: underline;
+                    padding: 0;
+                }
             }
         }
         .articles__cards{
-            margin: 40px 0 0;
+            margin-top: 40px;
             display: flex;
             align-items: stretch;
             justify-content: space-between;
+            @media (max-width:1024px){
+                margin-top: 30px;
+            }
+            @media (max-width:768px){
+                margin-top: 20px;
+            }
             .articles__card {
                 display: flex;
                 flex-direction: column;
                 max-width: 285px;
                 width: 100%;
+                &:nth-of-type(2){
+                    @media (max-width:768px){
+                        display: none;
+                    }
+                }
                 &:not(:last-of-type){
                     margin-right: 30px;
+                    @media (max-width:1024px){
+                        margin-right: 0;
+                    }
+                }
+                @media (max-width:1024px){
+                    max-width: 50%;
+                    width: 100%;
+                    &:nth-of-type(1n+3){
+                        display: none;
+                    }
+                    &:first-of-type{
+                        margin-right: 30px;
+                        @media (max-width:768px){
+                            margin: 0;
+                        }
+                    }
+                }
+                @media (max-width:768px){
+                    max-width:  100%;
+                }
+                img{
+                    object-fit: cover;
+                    width: 100%;
                 }
                 article{
                     padding: 15px;
@@ -83,23 +140,31 @@
                     }
                     >h4{
                         margin-top: 20px;
+                        @media (max-width:768px){
+                            margin-top: 15px;
+                        }
                         >a{
                             text-decoration: $td;
                             @include fontz($mon,$fst,600,16px,22px,$col1);
-                            
+                            @media (max-width:768px){
+                                @include fontz($mon,$fst,600,16px,20px,$col1);
+                            }
                         }
                     }
                     >p{
                         margin-top: 15px;
                         @include fontz($mon,$fst,400,14px,20px,$col2);
+                        @media (max-width:768px){
+                            @include fontz($mon,$fst,400,12px,16px,$col2);
+                        }
                     }
-                    >.articles__card-line{
+                    .articles__card-line{
                         margin-top: 22px;
                         height: 1px;
                         width: 100%;
                         background-color: #E2E7EB;
                     }
-                    >.articles__card-info{
+                    .articles__card-info{
                         display: flex;
                         align-items: stretch;
                         justify-content: space-between;
@@ -111,6 +176,9 @@
                             }
                             >span{
                                 @include fontz($mon,$fst,400,14px,19px,$col1);
+                                @media (max-width:768px){
+                                    @include fontz($mon,$fst,400,12px,16px,$col1);
+                                }
                             }
                         }
                         .articles__card-views{
@@ -119,6 +187,9 @@
                             }
                             >span{
                                 @include fontz($mon,$fst,400,14px,19px,$col1);
+                                @media (max-width:768px){
+                                    @include fontz($mon,$fst,400,12px,16px,$col1);
+                                }
                             }
                         }
                     }
