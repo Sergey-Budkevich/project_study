@@ -13,6 +13,9 @@
     box-sizing: border-box;
 }
 
+main{
+    overflow: hidden;
+}
 
 .content {
     max-width: calc(1230px + 16px * 2);
