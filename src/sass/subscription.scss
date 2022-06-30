@@ -136,6 +136,7 @@
                     > input {
                         height: 100%;
                         max-width: 330px;
+                        padding: 0 0 0 30px;
                         width: 100%;
                         border: none;
                         outline-color: $orange;
@@ -147,7 +148,6 @@
 
                         &::placeholder {
                             @include fontz($mon, $fst, 400, 16px, 16px, $col2);
-                            transform: translateX(30px);
                             @media (max-width:1024px){
                                 @include fontz($mon, $fst, 400, 14px, 14px, $col2);
                             }
